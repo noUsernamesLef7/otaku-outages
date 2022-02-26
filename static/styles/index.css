@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* -------------------------- TEXT SELECTION ------------------------- */
+::selection {
+  background: #4cbb85;
+}
+
+body, h1 {
+    font-family: sans-serif;
+}
+
+body, html {
+    height: 100%
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  font-size: 200%;
+  padding: 25px;
+}
+
+/* -------------------------- NAVIGATION START ------------------------- */
+nav, .container {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+nav, .container, .navbar-brand {
+  display: flex;
+  justify-content: center;
+}
+
+nav, .container, .navbar-brand img {
+  height: 60px;
+}
+
+nav, ul, li, a {
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    margin: 0rem 1rem;
+    font-weight: medium;
+}
+
+nav, ul, li, a.nav-link:hover {
+    color: #26baff !important;
+}
+
+nav ul li a:last-child {
+  margin-right: 0rem;
+}
+
+
+/* -------------------------- NAVIGATION END ------------------------- */
+
+/* ------------------------- SLIDE SHOW START --------------------  */
+.container {
+  margin-top: 2rem;
+  position: relative;
+}
+.container .carousel-inner {
+  height: 60vh;
+  border-radius: 1rem;
+}
+.container .carousel-inner .carousel-item img {
+  transform: scale(1.1);
+}
+.container .carousel-inner .carousel-item.active img {
+  transform: scale(1);
+  transition: all 2s ease-in-out;
+}
+.container .carousel-inner .carousel-item img {
+  height: 60vh;
+  object-fit: cover;
+}
+
+.container .carousel-inner .carousel-item .carousel-caption {
+  color: #ffffff;
+  z-index: 1;
+  font-family: "Rubik", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+.container .carousel-inner .carousel-item .carousel-caption h5 {
+  background: #ffffff2c;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* ------------------------- SLIDE SHOW END --------------------  */
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+  /* NAVIGATION */
+
+  nav ul li a {
+    font-size: 25px;
+    margin-top: 2rem;
+  }
