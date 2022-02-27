@@ -112,6 +112,11 @@ nav ul li a.nav-link:hover {
 nav ul li a:last-child {
   margin-right: 0rem;
 }
+
+.navbar-toggle {
+  display: none;
+}
+
 /* -------------------------- NAVIGATION END ------------------------- */
 
 /* ------------------------- SLIDE SHOW START --------------------  */
@@ -191,5 +196,9 @@ div.body-content {
 
   #hf-desc {
     text-align: justify;
+  }
+
+  .navbar-toggle {
+    display: inline-block;
   }
 }
