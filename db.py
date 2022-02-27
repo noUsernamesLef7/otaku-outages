@@ -23,7 +23,7 @@ def select_last_test(conn, service_name):
     with conn.cursor() as cur:
         cur.execute("SELECT * FROM stats WHERE name=%(service_name)s AND index = (SELECT MAX(index) FROM stats);",
                     {"service_name": service_name})
-    return cur.fetchone()
+        return cur.fetchone()
 
 
 # select all checks for a specified service over the specified time period
@@ -32,5 +32,5 @@ def select_last_test(conn, service_name):
 def select_sites(conn):
     with conn.cursor() as cur:
         cur.execute("SELECT * FROM sites")
-    return cur.fetchall()
+        return cur.fetchall()
 
