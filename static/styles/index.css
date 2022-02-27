@@ -179,9 +179,13 @@ div.w3-card {
   min-height: 460px;
 }
 
+.sw_png-nf {
+  width: 120px;
+}
+
 .sw_png {
-  width:120px;
-  border-radius:8px;
+  width: 120px;
+  border-radius: 9px;
 }
 
 /* ------ FOR TABLET ----------- */
