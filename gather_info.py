@@ -45,3 +45,5 @@ def populate_db():
                            time_interactive_score)
     conn.close()
     return
+
+populate_db()
