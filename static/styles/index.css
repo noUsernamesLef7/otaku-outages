@@ -1,62 +1,111 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+/* importing fonts from google font */
+
+/* ROBOTO FONT and »» RUBIK FONT (Combined) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@300;400;500;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
 }
 
+:root {
+  /* FONTS  */
+  --rubik: "Rubik", sans-serif;
+  --roboto: "Roboto", sans-serif;
 
-/* -------------------------- TEXT SELECTION ------------------------- */
+  /* COLOR */
+  --white: #fff;
+  --black: #000;
+  --h1Color: #4cbb85;
+  --h1ColorLight: #53ca90;
+  --theme: #26baff;
+  --bodyColor: #f4f1de;
+  --footerBtn: #936639;
+}
+
+/* TEXT SELECTION BACKGROUND COLOR  */
 ::selection {
-  background: #4cbb85;
+  background: var(--h1Color);
 }
 
-body, h1 {
-    font-family: sans-serif;
+/* SCROLL BAR STYLING */
+::-webkit-scrollbar {
+  width: 1vw;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--h1Color);
+  background-clip: padding-box;
+  border: 0.2vw solid var(--bodyColor);
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--bodyColor);
+  padding: 0.2vw;
 }
 
-body, html {
-    height: 100%
+/* GLOBAL STYLLING  */
+body {
+  background-color: var(--bodyColor);
+}
+
+h1 {
+  color: var(--h1Color);
+  font-size: 40px;
+  font-family: var(--rubik);
+  text-align: center;
+  padding: 10px;
 }
 
 h2 {
-  font-family: "Rubik", sans-serif;
+  color: var(--bodyColor);
+  font-family: var(--rubik);
   text-align: center;
   font-size: 200%;
   padding: 25px;
 }
 
+section {
+  margin-top: 5rem;
+}
+
+hr {
+  border-color: var(--white);
+  color: var(--white);
+  background-color: var(--white);
+  border: 3px solid var(--bodyColor);
+}
+
+#hf-desc {
+  font-family: var(--rubik);
+  text-align: center;
+  font-size: 20px;
+}
+
 /* -------------------------- NAVIGATION START ------------------------- */
-nav, .container {
+nav .container {
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
-
-nav, .container, .navbar-brand {
+nav .container .navbar-brand {
   display: flex;
   justify-content: center;
 }
-
-nav, .container, .navbar-brand img {
+nav .container .navbar-brand img {
   height: 60px;
 }
 
-nav, ul, li, a {
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 0rem 1rem;
-    font-weight: medium;
+nav ul li a {
+  font-family: var(--rubik);
+  font-size: 20px;
+  margin: 0rem 1rem;
+  font-weight: medium;
 }
-
-nav, ul, li, a.nav-link:hover {
-    color: #26baff !important;
+nav ul li a.nav-link:hover {
+  color: var(--theme) !important;
 }
-
 nav ul li a:last-child {
   margin-right: 0rem;
 }
-
-
 /* -------------------------- NAVIGATION END ------------------------- */
 
 /* ------------------------- SLIDE SHOW START --------------------  */
@@ -83,7 +132,7 @@ nav ul li a:last-child {
 .container .carousel-inner .carousel-item .carousel-caption {
   color: #ffffff;
   z-index: 1;
-  font-family: "Rubik", sans-serif;
+  font-family: var(--rubik);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,14 +146,29 @@ nav ul li a:last-child {
 
 /* ------------------------- SLIDE SHOW END --------------------  */
 
-
-
-
-
+/* ------ FOR TABLET ----------- */
 @media only screen and (max-width: 700px) {
   /* NAVIGATION */
-
   nav ul li a {
     font-size: 25px;
     margin-top: 2rem;
   }
+
+  /* SLIDE SHOW */
+  .container .carousel-inner {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .container .carousel-inner .carousel-item .carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  .container .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 14px;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+  }
+}
