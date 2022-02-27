@@ -73,10 +73,17 @@
                 <div class="w3-card w3-container">
                     <h3>Crunchy Roll</h3><br>
                     <img class="sw_png-nf w3-margin-bottom w3-text-theme" src="../static/Crunchyroll_Logo.png"/>
-                    <p>Status: </p>
-                    <p>Score: </p>
-                    <p>Speed Score: </p>
-                    <p>TTI: </p>
+
+                    {% if site_status["Crunchyroll"]['response_code'] == "200" %}
+                    <p>Status:  <span style="color: greenyellow"><strong>Online</strong></span> 🍜</p>
+                    {% else %}
+                    <p>Status:  <span style="color: darkred"><strong>Offline</strong></span> 💩</p>
+                    {% endif %}
+
+                    <p>Performance: 88.00%</p>
+                    <p>Speed Score: 1 sec</p>
+                    <p>TTI: 0.94 sec</p>
+
                 </div>
             </div>
 
@@ -84,10 +91,17 @@
                 <div class="w3-card w3-container">
                     <h3>Funimation</h3><br>
                     <img class="sw_png-nf w3-margin-bottom w3-text-theme" src="../static/Funimation_Logo.png">
-                    <p>Status: </p>
-                    <p>Score: </p>
-                    <p>Speed Score: </p>
-                    <p>TTI: </p>
+
+                    {% if site_status["Funimation"]['response_code'] == "200" %}
+                    <p>Status:  <span style="color: greenyellow"><strong>Online</strong></span> 🍜</p>
+                    {% else %}
+                    <p>Status:  <span style="color: darkred"><strong>Offline</strong></span> 💩</p>
+                    {% endif %}
+
+                    <p>Performance: {{ site_status["Funimation"]['score'] * 100 }}%</p>
+                    <p>Speed Score: {{ site_status["Funimation"]['speed_score'] }} sec</p>
+                    <p>TTI: {{ site_status["Funimation"]['tti'] }} sec</p>
+
                 </div>
             </div>
 
@@ -95,10 +109,17 @@
                 <div class="w3-card w3-container">
                     <h3>Hi Dive</h3><br>
                     <img class="sw_png w3-margin-bottom w3-text-theme" src="../static/HiDive_Logo.png"/>
-                    <p>Status: </p>
-                    <p>Score: </p>
-                    <p>Speed Score: </p>
-                    <p>TTI: </p>
+
+                    {% if site_status["HIDIVE"]['response_code'] == "200" %}
+                    <p>Status:  <span style="color: greenyellow"><strong>Online</strong></span> 🍜</p>
+                    {% else %}
+                    <p>Status:  <span style="color: darkred"><strong>Offline</strong></span> 💩</p>
+                    {% endif %}
+
+                    <p>Performance: {{ site_status["HIDIVE"]['score'] * 100 }}%</p>
+                    <p>Speed Score: {{ site_status["HIDIVE"]['speed_score'] }} sec</p>
+                    <p>TTI: {{ site_status["HIDIVE"]['tti'] }} sec</p>
+
                 </div>
             </div>
         </div>
@@ -108,10 +129,17 @@
                 <div class="w3-card w3-container">
                     <h3>Amazon Prime Video</h3><br>
                     <img class="sw_png w3-margin-bottom w3-text-theme" src="../static/Amazon_Logo.png"/>
-                    <p>Status: </p>
-                    <p>Score: </p>
-                    <p>Speed Score: </p>
-                    <p>TTI: </p>
+
+                    {% if site_status["Amazon Prime Video"]['response_code'] == "200" %}
+                    <p>Status:  <span style="color: greenyellow"><strong>Online</strong></span> 🍜</p>
+                    {% else %}
+                    <p>Status:  <span style="color: darkred"><strong>Offline</strong></span> 💩</p>
+                    {% endif %}
+
+                    <p>Performance: {{ site_status["Amazon Prime Video"]['score'] * 100 }}%</p>
+                    <p>Speed Score: {{ site_status["Amazon Prime Video"]['speed_score'] }} sec</p>
+                    <p>TTI: {{ site_status["Amazon Prime Video"]['tti'] }} sec</p>
+
                 </div>
             </div>
 
@@ -119,10 +147,17 @@
                 <div class="w3-card w3-container">
                     <h3>Hulu</h3><br>
                     <img class="sw_png w3-margin-bottom w3-text-theme" src="../static/Hulu_Logo.png"/>
-                    <p>Status: </p>
-                    <p>Score: </p>
-                    <p>Speed Score: </p>
-                    <p>TTI: </p>
+
+                    {% if site_status["Hulu"]['response_code'] == "200" %}
+                    <p>Status:  <span style="color: greenyellow"><strong>Online</strong></span> 🍜</p>
+                    {% else %}
+                    <p>Status:  <span style="color: darkred"><strong>Offline</strong></span> 💩</p>
+                    {% endif %}
+
+                    <p>Performance: {{ site_status["Hulu"]['score'] * 100 }}%</p>
+                    <p>Speed Score: {{ site_status["Hulu"]['speed_score'] }} sec</p>
+                    <p>TTI: {{ site_status["Hulu"]['tti'] }} sec</p>
+
                 </div>
             </div>
 
@@ -130,10 +165,16 @@
                 <div class="w3-card w3-container">
                     <h3>Netflix</h3><br>
                     <img class="sw_png w3-margin-bottom w3-text-theme" src="../static/Netflix_Logo.png"/>
-                    <p>Status: </p>
-                    <p>Score: </p>
-                    <p>Speed Score: </p>
-                    <p>TTI: </p>
+
+                    {% if site_status["Netflix"]['response_code'] == "200" %}
+                    <p>Status:  <span style="color: greenyellow"><strong>Online</strong></span> 🍜</p>
+                    {% else %}
+                    <p>Status:  <span style="color: darkred"><strong>Offline</strong></span> 💩</p>
+                    {% endif %}
+
+                    <p>Performance: {{ site_status["Netflix"]['score'] * 100 }}%</p>
+                    <p>Speed Score: {{ site_status["Netflix"]['speed_score'] }} sec</p>
+                    <p>TTI: {{ site_status["Netflix"]['tti'] }} sec</p>
                 </div>
             </div>
         </div>
