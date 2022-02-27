@@ -1,6 +1,6 @@
 /* importing fonts from google font */
 
-/* ROBOTO FONT and RUBIK FONT (Combined) */
+/* ROBOTO FONT and »» RUBIK FONT (Combined) */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@300;400;500;700&display=swap");
 
 * {
@@ -163,9 +163,15 @@ div.body-content {
   border-radius: 1rem;
   padding: 1rem;
 }
+div.w3-card {
+  background-color: var(--h1ColorLight);
+  border-radius: 1rem;
+  padding: 1rem;
+}
 .body-content p {
   color: var(--white);
 }
+
 
 
 /* ------ FOR TABLET ----------- */
