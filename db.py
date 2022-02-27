@@ -21,10 +21,9 @@ def insert_test(conn, service_name, response_code, score, speed_index_score, tti
 # Takes a db connection and service name and selects most recent test results of specified service
 def select_last_test(conn, service_name):
     with conn.cursor() as cur:
-        cur.execute("SELECT * FROM stats WHERE name=%(service_name)s AND index = (SELECT MAX(index) FROM stats);",
+        cur.execute("SELECT * FROM stats WHERE index = (SELECT MAX(index) FROM stats WHERE name=%(service_name)s);",
                     {"service_name": service_name})
         return cur.fetchone()
-
 
 # select all checks for a specified service over the specified time period
 
