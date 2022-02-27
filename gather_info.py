@@ -42,7 +42,7 @@ def populate_db():
 
             # insert into DB
             db.insert_test(conn, site[0], is_up, overall_score, float(''.join(c for c in speed_index_score if c.isdigit())),
-                           time_interactive_score)
+                           float(''.join(c for c in time_interactive_score if c.isdigit())))
     conn.close()
     return
 
