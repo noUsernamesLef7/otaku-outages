@@ -16,7 +16,15 @@ def insert_test(conn, service_name, response_code, score, speed_index_score, tti
 def select_last_test(conn, service_name):
     with conn.cursor() as cur:
         cur.execute("SELECT * FROM stats WHERE name=%(service_name)s AND index = (SELECT MAX(index) FROM stats);", {"service_name":service_name})
-    conn.commit()
-    return
+    return cur.fetchone()
 
 # select all checks for a specified service over the specified time period
+=======
+#TODO
+
+# select a list of all sites in the sites table
+def select_sites(conn):
+    with conn.cursor() as cur:
+        cur.execute("SELECT * FROM sites")
+    return cur.fetchall()
+ 
