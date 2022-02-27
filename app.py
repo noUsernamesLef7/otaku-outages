@@ -7,13 +7,16 @@ app = Flask(__name__)
 def index_page():
     return render_template("index.html")
 
+
 @app.route('/tech', methods=["GET"])
 def tech_page():
     return render_template("tech.html")
 
+
 @app.route('/about', methods=["GET"])
 def about_page():
     return render_template("about.html")
+
 
 @app.route('/authors', methods=["GET"])
 def authors_page():
