@@ -13,11 +13,11 @@
         <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/index.css') }}">
     </head>
     <body>
-
         <!------------- Navigation Start ------------->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
              <div class="container">
-                 <a class="navbar-brand" href="{{ url_for('index_page') }}"><img src="../static/logo.jpg" alt="Otaku Outages Logo"></a>
+                 <a class="navbar-brand" href="{{ url_for('index_page') }}"><img src="../static/logo.jpg"
+                                                                                 alt="Otaku Outages Logo"></a>
                  <button
                      class="navbar-toggle"
                      type="button"
@@ -45,7 +45,39 @@
              </div>
         </nav>
 
-        <h1>About Page</h1>
+        <main>
+            <section id="section--1">
+                <div class="container">
+                    <h1>About Page</h1>
+                    <div class="body-content">
+                        <h2>RevolutionUC</h2>
+                        <hr />
+                        <p id="ru-desc">For the RevolutionUC hackathon we put together a status page that reports
+                        on the availability of the top anime streaming sites. To see more about the RevolutionUC Event
+                        Click <a class="hyperlink" href="https://revolutionuc.com/">Here!</a></p>
+                        <p><strong>Details of our RevolutionUC project</strong></p>
+
+                        <ul class="text-white">
+                            <li>Monitors the top anime streaming sites
+                                <ul>
+                                    <li>CrunchyRoll</li>
+                                    <li>Funimation</li>
+                                    <li>HiDive</li>
+                                    <li>Netflix</li>
+                                    <li>And more!</li>
+                                </ul>
+                            </li>
+                            <li>Otaku Outages is a website dedicated to notifying our users of any potential issues
+                            that could potentially impact your access to Anime and Waifus!</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
 
     </body>
 
