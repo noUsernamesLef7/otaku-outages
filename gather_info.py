@@ -37,8 +37,8 @@ def populate_db():
             # assign DB variables
             is_up = response.getcode()
             overall_score = data["lighthouseResult"]["categories"]["performance"]["score"]
-            speed_index_score = data["lighthouseResult"]["audits"]["speed-index"]["score"]
-            time_interactive_score = data["lighthouseResult"]["audits"]["interactive"]["score"]
+            speed_index_score = data["lighthouseResult"]["audits"]["speed-index"]["displayValue"]
+            time_interactive_score = data["lighthouseResult"]["audits"]["interactive"]["displayValue"]
 
             # insert into DB
             db.insert_test(conn, site[0], is_up, overall_score, speed_index_score,
