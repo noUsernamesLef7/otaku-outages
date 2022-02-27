@@ -1,8 +1,9 @@
 import psycopg2
 
 def connect_to_database():
-    conn = psycopg2.connect("")
-    return conn
+    return psycopg2.connect(
+        "sslmode=disable dbname=postgres user=postgres hostaddr=35.221.45.109"
+    )
 
 # Takes a db connection, service name, http response code, performance score, speed index score, and time to interactive value, then inserts it in the stats table
 def insert_test(conn, service_name, response_code, score, speed_index_score, tti):
@@ -18,6 +19,7 @@ def select_last_test(conn, service_name):
     return cur.fetchone()
 
 # select all checks for a specified service over the specified time period
+=======
 #TODO
 
 # select a list of all sites in the sites table
@@ -25,3 +27,4 @@ def select_sites(conn):
     with conn.cursor() as cur:
         cur.execute("SELECT * FROM sites")
     return cur.fetchall()
+ 
