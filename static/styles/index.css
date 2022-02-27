@@ -117,6 +117,10 @@ nav ul li a:last-child {
   display: none;
 }
 
+.navbar {
+  background-color: var(--h1Color);
+}
+
 /* -------------------------- NAVIGATION END ------------------------- */
 
 /* ------------------------- SLIDE SHOW START --------------------  */
@@ -157,7 +161,6 @@ nav ul li a:last-child {
 
 /* ------------------------- SLIDE SHOW END --------------------  */
 
-
 div.body-content {
   background-color: var(--h1ColorLight);
   border-radius: 1rem;
@@ -172,7 +175,14 @@ div.w3-card {
   color: var(--white);
 }
 
+.w3-card {
+  min-height: 460px;
+}
 
+.sw_png {
+  width:120px;
+  border-radius:8px;
+}
 
 /* ------ FOR TABLET ----------- */
 @media only screen and (max-width: 700px) {
