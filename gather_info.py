@@ -41,7 +41,9 @@ def populate_db():
             time_interactive_score = data["lighthouseResult"]["audits"]["interactive"]["displayValue"]
 
             # insert into DB
-            db.insert_test(conn, site[0], is_up, overall_score, speed_index_score,
-                           time_interactive_score)
+            db.insert_test(conn, site[0], is_up, overall_score, float(''.join(c for c in speed_index_score if c.isdigit())),
+                           float(''.join(c for c in time_interactive_score if c.isdigit())))
     conn.close()
     return
+
+populate_db()
