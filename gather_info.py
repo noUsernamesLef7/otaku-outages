@@ -1,7 +1,7 @@
 import urllib.request
 import json
 import cloudscraper
-from . import db
+import db
 
 
 def populate_db():
@@ -17,6 +17,7 @@ def populate_db():
 
     for site in website_list:
         # check if site is crunchyroll
+        print(site)
         if site[0].lower() == "crunchyroll":
             # use cloudscraper to bypass Crunchyroll lmao gottem ggs no re
             is_up = scraper.get("https://www.crunchyroll.com").status_code
